@@ -10,8 +10,8 @@ from datetime import datetime
 from airflow.sdk import dag, task
 
 
-@dag(dag_id="prevoir_executions", schedule="0 6 * * *",
-     start_date=datetime(2026, 11, 1), catchup=True, tags=["planification"])
+@dag(dag_id="prevoir_executions_v2", schedule="0 6 * * *",
+     start_date=datetime(2026, 11, 1), catchup=False, tags=["planification"])
 def prevoir_executions():
     @task
     def afficher(logical_date=None, data_interval_start=None, data_interval_end=None):

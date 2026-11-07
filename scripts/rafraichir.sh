@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 source scripts/env.sh
-python - <<'PY'
+python3 - <<'PY'
 import importlib.util, pathlib, traceback
 ok = True
 for f in sorted(pathlib.Path("dags").glob("*.py")):
